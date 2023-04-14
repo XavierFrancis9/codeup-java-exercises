@@ -6,5 +6,7 @@ public class HelloWorld {
         // MUST use semicolons are end of statements IOT compile
         // short cut is sout + tab
         System.out.println("Hello, World!");
+        System.out.print("Hello,");
+        System.out.print(" World!");
     }
 }
