@@ -45,21 +45,33 @@ public class ControlFlowExercises {
         // part c
         // refactor part a/b using for loops
 
-        for(int i = 5; i <= 15; i++) {
-            System.out.println(i);
-        }
+//        for(int i = 5; i <= 15; i++) {
+//            System.out.println(i);
+//        }
+//
+//        for(int x = 0; x <= 100; x+=2) {
+//            System.out.println(x);
+//        }
+//
+//        for (int y = 100; y >= 0; y-=5) {
+//            System.out.println(y);
+//        }
+//
+//        for(long z = 2; z <= 65536; z *= z) {
+//            System.out.println(z);
+//        }
+        // question 2
+        String fizz = "Fizz";
+        String buzz = "Buzz";
 
-        for(int x = 0; x <= 100; x+=2) {
-            System.out.println(x);
+        for(int i = 1; i <=100; i++) {
+            if(i%3 == 0 && i%5 ==0) {
+                System.out.println(fizz + buzz);
+            } else if(i%3 ==0) {
+                System.out.println(fizz);
+            } else if(i%5 ==0) {
+                System.out.println(buzz);
+            }
         }
-
-        for (int y = 100; y >= 0; y-=5) {
-            System.out.println(y);
-        }
-
-        for(long z = 2; z <= 65536; z *= z) {
-            System.out.println(z);
-        }
-
     }
 }
