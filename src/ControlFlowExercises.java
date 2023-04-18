@@ -35,46 +35,47 @@ public class ControlFlowExercises {
 //            System.out.println(y);
 //        }
 
-        // do while loop that displays num squared less than 1000000
-//        int z = 2;
+//         do while loop that displays num squared less than 1000000
+//        long z = 2;
 //
 //        do {
 //            System.out.println(z);
 //            z *= z;
-//        } while (z < 65536);
-//        System.out.println(z);
+//        } while (z <= 1_000_000);
 
         // part c
         // refactor part a/b using for loops
 
-//        for(int i = 5; i <= 15; i++) {
-//            System.out.println(i);
-//        }
-//
-//        for(int x = 0; x <= 100; x+=2) {
-//            System.out.println(x);
-//        }
-//
-//        for (int y = 100; y >= 0; y-=5) {
-//            System.out.println(y);
-//        }
-//
-//        for(long z = 2; z <= 65536; z *= z) {
-//            System.out.println(z);
-//        }
+        for(int i = 5; i <= 15; i++) {
+            System.out.print(i + " ");
+        }
+
+        for(int x = 0; x <= 100; x+=2) {
+            System.out.println(x);
+        }
+
+        for (int y = 100; y >= 0; y-=5) {
+            System.out.println(y);
+        }
+
+        for(long z = 2; z <= 65536; z *= z) {
+            System.out.println(z);
+        }
         // question 2 FizzBuzz
-//        String fizz = "Fizz";
-//        String buzz = "Buzz";
-//
-//        for(int i = 1; i <=100; i++) {
-//            if(i%3 == 0 && i%5 ==0) {
-//                System.out.println(fizz + buzz);
-//            } else if(i%3 ==0) {
-//                System.out.println(fizz);
-//            } else if(i%5 ==0) {
-//                System.out.println(buzz);
-//            }
-//        }
+        String fizz = "Fizz";
+        String buzz = "Buzz";
+
+        for(int i = 1; i <=100; i++) {
+            if(i%3 == 0 && i%5 ==0) {
+                System.out.println(i + " " + fizz + buzz);
+            } else if(i%3 ==0) {
+                System.out.println(i + " " + fizz);
+            } else if(i%5 ==0) {
+                System.out.println(i + " " + buzz);
+            } else {
+                System.out.println(i);
+            }
+        }
         // question 3 table of powers
         String userInput;
         do {
@@ -92,7 +93,7 @@ public class ControlFlowExercises {
 
             System.out.println("Continue? [y/N]\n");
             userInput = user.next();
-        } while (userInput.equals("y"));
+        } while (userInput.equalsIgnoreCase("y"));
         System.out.println("See you next time!");
 
 
@@ -134,14 +135,16 @@ public class ControlFlowExercises {
                     System.out.println("A-");
                 } else if(userGrade <= 96) {
                     System.out.println("A");
-                } else {
+                } else if (userGrade <= 100){
                     System.out.println("A+");
+                } else {
+                    System.out.println("Not a valid grade");
                 }
             }
 
             System.out.println("Continue? [y/N]\n");
             continueGrades = sc.next();
-        } while (continueGrades.equals("y"));
+        } while (continueGrades.equalsIgnoreCase("y"));
         System.out.println("See you next time!");
     }
 }
