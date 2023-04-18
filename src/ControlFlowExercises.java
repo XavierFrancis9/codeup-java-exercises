@@ -76,17 +76,72 @@ public class ControlFlowExercises {
 //            }
 //        }
         // question 3 table of powers
-        Scanner user = new Scanner(System.in);
-        System.out.println("What number would you like to go up to? ");
-        int userNum = user.nextInt();
-        System.out.printf("Number | Squared | Cubed%n------ | ------- | -----%n");
+        String userInput;
+        do {
+            Scanner user = new Scanner(System.in);
+            System.out.println("What number would you like to go up to? ");
+            int userNum = user.nextInt();
+            System.out.printf("Number | Squared | Cubed%n------ | ------- | -----%n");
 
-        for(int i = 1; i <= userNum; i++) {
-            long squared = i * i;
-            long cubed = squared * i;
+            for (int i = 1; i <= userNum; i++) {
+                long squared = i * i;
+                long cubed = squared * i;
 
-            System.out.printf("%-6d | %-7d | %-5d%n", i, squared, cubed);
-        }
+                System.out.printf("%-6d | %-7d | %-5d%n", i, squared, cubed);
+            }
 
+            System.out.println("Continue? [y/N]\n");
+            userInput = user.next();
+        } while (userInput.equals("y"));
+        System.out.println("See you next time!");
+
+
+        // question 4 grades
+        String continueGrades;
+        do {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter your numeric grade: \n");
+            int userGrade = sc.nextInt();
+
+            if (userGrade <= 59) {
+                System.out.println("F");
+            } else if (userGrade <= 66) {
+                if(userGrade <= 62) {
+                    System.out.println("D-");
+                } else if(userGrade <= 64) {
+                    System.out.println("D");
+                } else {
+                    System.out.println("D+");
+                }
+            } else if (userGrade <= 79) {
+                if(userGrade <= 71) {
+                    System.out.println("C-");
+                } else if(userGrade <= 75) {
+                    System.out.println("C");
+                } else {
+                    System.out.println("C+");
+                }
+            } else if (userGrade <= 87) {
+                if(userGrade <= 83) {
+                    System.out.println("B-");
+                } else if(userGrade <= 85) {
+                    System.out.println("B");
+                } else {
+                    System.out.println("B+");
+                }
+            } else {
+                if(userGrade <= 92) {
+                    System.out.println("A-");
+                } else if(userGrade <= 96) {
+                    System.out.println("A");
+                } else {
+                    System.out.println("A+");
+                }
+            }
+
+            System.out.println("Continue? [y/N]\n");
+            continueGrades = sc.next();
+        } while (continueGrades.equals("y"));
+        System.out.println("See you next time!");
     }
 }
