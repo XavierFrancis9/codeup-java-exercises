@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
         // question 1
@@ -60,18 +62,31 @@ public class ControlFlowExercises {
 //        for(long z = 2; z <= 65536; z *= z) {
 //            System.out.println(z);
 //        }
-        // question 2
-        String fizz = "Fizz";
-        String buzz = "Buzz";
+        // question 2 FizzBuzz
+//        String fizz = "Fizz";
+//        String buzz = "Buzz";
+//
+//        for(int i = 1; i <=100; i++) {
+//            if(i%3 == 0 && i%5 ==0) {
+//                System.out.println(fizz + buzz);
+//            } else if(i%3 ==0) {
+//                System.out.println(fizz);
+//            } else if(i%5 ==0) {
+//                System.out.println(buzz);
+//            }
+//        }
+        // question 3 table of powers
+        Scanner user = new Scanner(System.in);
+        System.out.println("What number would you like to go up to? ");
+        int userNum = user.nextInt();
+        System.out.printf("Number | Squared | Cubed%n------ | ------- | -----%n");
 
-        for(int i = 1; i <=100; i++) {
-            if(i%3 == 0 && i%5 ==0) {
-                System.out.println(fizz + buzz);
-            } else if(i%3 ==0) {
-                System.out.println(fizz);
-            } else if(i%5 ==0) {
-                System.out.println(buzz);
-            }
+        for(int i = 1; i <= userNum; i++) {
+            long squared = i * i;
+            long cubed = squared * i;
+
+            System.out.printf("%-6d | %-7d | %-5d%n", i, squared, cubed);
         }
+
     }
 }
