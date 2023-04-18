@@ -5,7 +5,7 @@ import static java.lang.Float.parseFloat;
 public class ConsoleExercises {
     public static void main (String[] args) {
         double pi = 3.14159;
-        System.out.printf("The value of pi is %s.%n", pi);
+        System.out.printf("The value of pi is approximately %.2f.%n", pi);
 
         Scanner user = new Scanner(System.in);
         System.out.print("Enter an integer: ");
