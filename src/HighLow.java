@@ -27,18 +27,32 @@ public class HighLow {
 
             if(input < randomNumber) {
                 count +=1;
+                if(count >= 10) {
+                    System.out.println("You ran out of guesses!");
+                    break;
+                }
                 System.out.println("HIGHER");
                 System.out.println("Total Guesses: " + count);
             } else if (input > randomNumber) {
                 count +=1;
+                if(count >= 10) {
+                    System.out.println("You ran out of guesses!");
+                    break;
+                }
                 System.out.println("LOWER");
                 System.out.println("Total Guesses: " + count);
             } else {
-                System.out.println("BINGO! Good job!");
+                count+=1;
+                if(count == 10) {
+                    System.out.println("Good Job! That was a close one!");
+                    break;
+                } else {
+                    System.out.println("BINGO! Good job!");
+                }
                 System.out.println("Total Guesses: " + count);
             }
-        } while(input != randomNumber && count < 10);
-        System.out.printf("Would you like to play again? [Y/N]\n");
+        } while(input != randomNumber);
+        System.out.println("Would you like to play again? [Y/N]\n");
         response = sc.next();
         if(response.equalsIgnoreCase("Y")) {
             numberGuesser();
