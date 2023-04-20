@@ -20,6 +20,7 @@ public class Input {
     }
 
     public double getDouble() {
+        System.out.println("Enter a double: ");
         return scanner.nextDouble();
     }
 
