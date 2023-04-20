@@ -13,7 +13,7 @@ public class Person {
     }
 
     public void sayHello() {
-        System.out.printf("Hello, %s", name);
+        System.out.printf("Hello, %s", this.name);
     }
 
 
@@ -21,5 +21,6 @@ public class Person {
         Person p1 = new Person();
         p1.setName("Xavier");
         p1.sayHello();
+
     }
 }
