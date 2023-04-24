@@ -19,13 +19,17 @@ public class Input {
         return scanner.nextInt();
     }
 
+    public int getIntChoice() {
+        return scanner.nextInt();
+    }
+
     public double getDouble() {
         System.out.println("Enter a double: ");
         return scanner.nextDouble();
     }
 
     public boolean yesNo() {
-        System.out.println("Continue? [Y/N]");
+        System.out.println("\nContinue? [Y/N]");
         String input = scanner.next();
         if(input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y")) {
             return true;
