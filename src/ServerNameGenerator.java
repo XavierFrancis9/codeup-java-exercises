@@ -15,4 +15,5 @@ public class ServerNameGenerator {
         int nounIndex = random.nextInt(nouns.length);
         return adjectives[adjIndex] + "-" + nouns[nounIndex];
     }
+
 }
