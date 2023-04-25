@@ -9,16 +9,16 @@ public class Rectangle {
         this.width = width;
     }
 
-    public static int perimeter(int length, int width) {
+    public static int getPerimeter(int length, int width) {
         return 2 * (length + width);
     }
 
-    public static int area(int length, int width) {
+    public static int getArea(int length, int width) {
         return length * width;
     }
 
     public static void main(String[] args) {
-        System.out.println(perimeter(5,7));
-        System.out.println(area(5,7));
+        System.out.println(getPerimeter(5,7));
+        System.out.println(getArea(5,7));
     }
 }
