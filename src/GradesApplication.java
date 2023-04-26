@@ -45,8 +45,8 @@ public class GradesApplication {
             System.out.println("\n\nWhat student would you like to see more information on?");
             String selection1 = input.getString();
             if(students.containsKey(selection1)) {
-                System.out.println("\nUsername: " + selection1);
-                System.out.println("Student name: " + students.get(selection1).getName());
+                System.out.println("\nStudent name: " + students.get(selection1).getName());
+                System.out.println("GitHub Username: " + selection1);
                 System.out.println("Average grade: " + students.get(selection1).getAverageGrade());
             } else {
                 System.out.println("Sorry, no student found with the GitHub username \"" + selection1 + "\".");
