@@ -13,6 +13,9 @@ public class Student {
         return this.name;
     }
 
+
+
+
     public void addGrade(int grade) {
         this.grades.add(grade);
     }
@@ -27,5 +30,9 @@ public class Student {
             }
             return (double) sum / this.grades.size();
         }
+    }
+
+    public ArrayList<Integer> getGrades() {
+        return this.grades;
     }
 }

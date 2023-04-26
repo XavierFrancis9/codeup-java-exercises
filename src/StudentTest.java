@@ -6,6 +6,7 @@ public class StudentTest {
         xavier.addGrade(90);
         xavier.addGrade(85);
 
+
         System.out.println(xavier.getAverageGrade());
     }
 }
