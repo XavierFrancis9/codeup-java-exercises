@@ -10,12 +10,11 @@ public class Input {
     }
 
     public String getString() {
-        System.out.println("Enter a string: ");
         return scanner.next();
     }
 
+
     public int getInt() {
-        System.out.println("Enter an integer: ");
         return scanner.nextInt();
     }
 
@@ -24,7 +23,6 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.println("Enter a double: ");
         return scanner.nextDouble();
     }
 
