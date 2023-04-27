@@ -15,7 +15,13 @@ public class Input {
 
 
     public int getInt() {
-        return scanner.nextInt();
+        String input = scanner.next();
+        try {
+            return Integer.valueOf(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter an integer.");
+            return getInt();
+        }
     }
 
     public int getIntChoice() {
@@ -23,7 +29,13 @@ public class Input {
     }
 
     public double getDouble() {
-        return scanner.nextDouble();
+        String input = scanner.next();
+        try {
+            return Double.valueOf(input);
+        } catch(NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a double.");
+            return getDouble();
+        }
     }
 
     public boolean yesNo() {
@@ -62,8 +74,4 @@ public class Input {
         return input;
     }
 
-
-    public static void main(String[] args) {
-
-    }
 }

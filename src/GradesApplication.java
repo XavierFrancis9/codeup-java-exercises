@@ -55,10 +55,11 @@ public class GradesApplication {
                 System.out.println("\n----  Please make a selection  ----\n1 --- View ALL Student Reports\n2 --- View Overall Class Average\n3 --- Print CSV report\n");
                 System.out.println("Please make your selection: \n");
                 int selection2 = input.getInt();
+
                 switch(selection2) {
                     case 1:
                         for(String username : students.keySet()) {
-                            System.out.println("Student name: " + students.get(username).getName());
+                            System.out.println("\nStudent name: " + students.get(username).getName());
                             System.out.println("GitHub Username: " + username);
                             System.out.println(students.get(username).getGrades());
                             System.out.println("Average grade: " + students.get(username).getAverageGrade());
